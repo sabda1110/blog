@@ -1,0 +1,74 @@
+.lastes__container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.lastes__container-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 20rem;
+  justify-self: center;
+  background-color: var(--container-color);
+  margin-bottom: var(--mb-2);
+}
+
+.lastes__title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+}
+
+.lastes__subtitle {
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.lastes__input {
+  width: 60%;
+  display: flex;
+}
+
+.lastes__input-input {
+  width: 60%;
+  outline: none;
+  border: none;
+  padding: 12px;
+  border-radius: 0.2rem;
+  margin-right: var(--mb-0-75);
+  height: 3rem;
+}
+
+.lastes__input-button {
+  padding: 1rem 2rem;
+  height: 3rem;
+  border-radius: 0.2rem;
+  color: var(--container-color);
+  background-color: var(--text-purple);
+}
+
+/* ==================Breakpoint======================== */
+@media screen and (max-width: 550px) {
+  .lastes__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .lastes__title {
+    font-size: var(--h2-font-size);
+  }
+
+  .lastes__subtitle {
+    font-size: var(--small-font-size);
+  }
+  .lastes__input {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .lastes__input-input {
+    width: 100%;
+    margin-bottom: var(--mb-0-5);
+  }
+}

@@ -5,12 +5,12 @@ import Image3 from '../../assets/Article_Image3.png';
 import Image4 from '../../assets/Article_Image4.png';
 import Profile from '../../assets/Ellipse 80.png';
 
-const Feature = () => {
+const Feature = ({ title, status }) => {
   return (
     <section className="feature section">
       <div className="feature__container container">
         <div className="feature__menu">
-          <span className="feature__menu-title">Featured Article</span>
+          <span className="feature__menu-title">{title}</span>
           <span className="feature__menu-subtitle">
             See All Article
             <i className="uil uil-angle-right feature__menu-icon"></i>
@@ -90,6 +90,16 @@ const Feature = () => {
               <span className="feature__card-minete">3 Min Read</span>
             </div>
           </div>
+        </div>
+        <div className="feature__button">
+          <button
+            className={`feature__button-item ${
+              status ? 'feature__button-active' : ''
+            }`}
+          >
+            More Article
+          </button>
+          {/* <button className="feature__button">More Article</button> */}
         </div>
       </div>
     </section>
