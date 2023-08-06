@@ -105,6 +105,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .feature__card-image {
+    width: 150px;
+  }
+
   .feature__card-title {
     height: 2rem;
   }
