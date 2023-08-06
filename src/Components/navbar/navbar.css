@@ -1,0 +1,130 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  height: calc(var(--header-height) + 1.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  font-size: var(--h3-font-size);
+}
+
+.nav__sublogo {
+  font-size: var(--smaller-font-size);
+  color: var(--text-purple);
+}
+
+.nav__list {
+  display: flex !important;
+  column-gap: 2rem;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  gap: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+  opacity: 0.6;
+  position: relative;
+}
+
+.nav__link:hover {
+  opacity: 1;
+}
+
+.nav__link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--text-purple);
+  transition: all 0.45s;
+}
+
+.nav__link:hover::before {
+  width: 100%;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__list {
+    position: absolute;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: all 0.45s;
+  }
+
+  .nav__list.open {
+    transform: translateX(0);
+  }
+
+  .nav__toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .nav__bar {
+    position: relative;
+    width: 32px;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .nav__bar.satu,
+  .nav__bar.tiga {
+    content: '';
+    position: relative;
+    height: 2px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .nav__bar.open.satu {
+    transform: rotate(45deg) translate(38px, -38px);
+  }
+
+  .nav__bar.open.tiga {
+    transform: rotate(-45deg) translate(38px, 38px);
+  }
+}

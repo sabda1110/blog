@@ -1,0 +1,110 @@
+.category__menu {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--font-medium);
+  color: var(--title-color-dark);
+  cursor: pointer;
+  position: relative;
+}
+
+.category__card {
+  grid-template-columns: repeat(5, 160px);
+  column-gap: 2.7rem !important;
+  margin-top: var(--mb-3);
+}
+
+.category__card-item {
+  /* border: 2px solid rgba(0, 0, 0, 0.2); */
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  border-radius: 0.8rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  background-color: #fff;
+  border: 2px solid #eff0f3;
+}
+
+.category__card-icon {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.8rem;
+  margin-bottom: var(--mb-0-75);
+  text-align: center;
+  background-color: #fff;
+}
+
+.category__card-title {
+  color: var(--title-color-dark);
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+}
+
+.category__card-active {
+  background-color: var(--text-purple);
+  /* color: var(--container-color); */
+}
+
+.category__card-active span {
+  color: #fff;
+}
+
+.category__menu-icon {
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.category__menu:hover .category__menu-icon {
+  border: 5px solid #fff;
+}
+
+/* ===================Breakpoint======================= */
+
+@media screen and (max-width: 992px) {
+  .category__container {
+    padding: 0 20px;
+  }
+
+  .category__menu {
+    font-size: var(--normal-font-size);
+  }
+
+  .category__card {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category__card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .category__card {
+    grid-template-columns: repeat(3, 120px);
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .category__card-item {
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .category__menu {
+    width: 100%;
+    font-size: var(--smaller-font-size);
+  }
+
+  .category__card {
+    grid-template-columns: repeat(2, 120px);
+    padding: 10px;
+  }
+}

@@ -1,0 +1,133 @@
+.feature {
+  background-color: var(--container-color);
+}
+
+.feature__menu {
+  display: flex;
+  justify-content: space-between;
+  color: var(--title-color-dark);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  position: relative;
+  margin-bottom: var(--mb-2);
+}
+
+.feature__menu-title::after {
+  content: '';
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 2rem;
+  height: 0.1rem;
+  background-color: var(--title-color-dark);
+}
+
+.feature__card {
+  grid-template-columns: repeat(4, 230px);
+  column-gap: 1rem !important;
+}
+
+.feature__card-item {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  background-color: #fff;
+  border: 2px solid #eff0f3;
+  border-radius: 0.8rem;
+}
+
+.feature__card-image {
+  width: 200px;
+  margin-bottom: var(--mb-1);
+}
+
+.feature__card-title {
+  color: var(--title-color-dark);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-3);
+  width: 90%;
+  height: 3rem;
+}
+
+.feature__card-desc {
+  display: flex;
+  font-size: var(--smaller-font-size);
+  padding-left: 5px;
+}
+
+.feature__desc-image {
+  width: 32px;
+  margin-right: var(--mb-1);
+}
+
+.feature__desc {
+  display: flex;
+  flex-direction: column;
+  margin-right: var(--mb-0-75);
+}
+
+.feature__desc-username {
+  color: var(--title-color-dark);
+}
+
+.feature__card-minete {
+  margin-top: 20px;
+}
+
+/* ==================BreakPoint ===================== */
+
+@media screen and (max-width: 992px) {
+  .feature__container {
+    padding: 0 20px;
+  }
+
+  .feature__card {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feature__card-image {
+    width: 180px;
+  }
+
+  .feature__desc-image {
+    width: 28px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feature__card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature__card-title {
+    height: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .feature__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .feature__card {
+    grid-template-columns: 1fr;
+  }
+
+  .feature__menu {
+    font-size: var(--small-font-size);
+  }
+
+  .feature__card-desc {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+}
