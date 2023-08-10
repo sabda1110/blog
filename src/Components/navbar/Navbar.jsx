@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="#" className="nav__logo">
+        <a href="/" className="nav__logo">
           Whatsab<span className="nav__sublogo">.Blog</span>
         </a>
         <div className="nav__menu">

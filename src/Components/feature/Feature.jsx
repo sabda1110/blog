@@ -4,8 +4,11 @@ import Image2 from '../../assets/Article_Image2.png';
 import Image3 from '../../assets/Article_Image3.png';
 import Image4 from '../../assets/Article_Image4.png';
 import Profile from '../../assets/Ellipse 80.png';
+import Image5 from '../../assets/html.png';
+import { useNavigate } from 'react-router-dom';
 
 const Feature = ({ title, status }) => {
+  const navigate = useNavigate();
   return (
     <section className="feature section">
       <div className="feature__container container">
@@ -18,7 +21,10 @@ const Feature = ({ title, status }) => {
         </div>
 
         <div className="feature__card grid">
-          <div className="feature__card-item">
+          <div
+            className="feature__card-item"
+            onClick={() => navigate('/blog/contentPertama')}
+          >
             <img src={Image} alt="" className="feature__card-image" />
             <span className="feature__card-title">
               Fundametal Of JavaScript
@@ -36,11 +42,12 @@ const Feature = ({ title, status }) => {
               <span className="feature__card-minete">3 Min Read</span>
             </div>
           </div>
-          <div className="feature__card-item">
-            <img src={Image2} alt="" className="feature__card-image" />
-            <span className="feature__card-title">
-              Grid CSS Make Your Life Easier
-            </span>
+          <div
+            className="feature__card-item"
+            onClick={() => navigate('/blog/ketiga')}
+          >
+            <img src={Image5} alt="" className="feature__card-image" />
+            <span className="feature__card-title">Fundamental Of Html</span>
             <div className="feature__card-desc">
               <img
                 src={Profile}
