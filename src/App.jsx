@@ -4,7 +4,7 @@ import IndexContent from './page/content/IndexContent';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/blog" element={<Home />} />
         <Route path="*" element={<IndexContent />} />
